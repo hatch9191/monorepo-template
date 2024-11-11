@@ -1,0 +1,13 @@
+{
+  "extends": ["./.eslintrc.base.json", "plugin:react/recommended", "next"],
+  "plugins": ["react", "jsx-a11y"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }]
+  }
+}

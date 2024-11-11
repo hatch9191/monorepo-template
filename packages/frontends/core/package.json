@@ -1,0 +1,10 @@
+{
+  "name": "core-frontend",
+  "scripts": {
+    "format": "prettier --config ../../../config/prettier/.prettierrc --write ."
+  },
+  "dependencies": {
+    "@monorepo/utils": "*",
+    "@monorepo/ui": "*"
+  }
+}

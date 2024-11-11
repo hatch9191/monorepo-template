@@ -1,0 +1,29 @@
+name: Staging ECS Deployment
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+    paths:
+    - 'packages/frontend/core/**'
+
+jobs:
+  staging-release:
+    needs: semantic-release
+    uses: feast-it/tapas/.github/workflows/ecs_deploy.yml@main
+    with:
+      aws-region: "eu-west-1"
+      service-name: "live360"
+      ecr-registry: "425467143518.dkr.ecr.eu-west-1.amazonaws.com"
+      ecr-repository: "live360"
+      task-definition-name: "live360-task-def"
+      ecs-cluster: "live360"
+      node-version: "20.x"
+      yarn-build: true
+    secrets:
+      aws-account-id: ${{ secrets.STAGING_AWS_ACCOUNT_ID }}
+      aws-access-key-id: ${{ secrets.STAGING_AWS_ACCESS_KEY_ID }}
+      aws-secret-access-key: ${{ secrets.STAGING_AWS_SECRET_ACCESS_KEY }}
+      npm-token: ${{ secrets.NPM_TOKEN }}
+      slack-webhook-url: ${{ secrets.SLACK_NOTIFICATION_WEBHOOK }}

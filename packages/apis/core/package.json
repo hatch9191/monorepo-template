@@ -1,0 +1,9 @@
+{
+  "name": "core-api",
+  "scripts": {
+    "format": "prettier --config ../../../config/prettier/.prettierrc --write ."
+  },
+  "dependencies": {
+    "@monorepo/utils": "*"
+  }
+}

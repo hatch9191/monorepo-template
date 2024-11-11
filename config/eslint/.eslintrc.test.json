@@ -1,0 +1,16 @@
+{
+  "extends": ["./.eslintrc.base.json"],
+  "plugins": ["vitest"],
+  "env": {
+    "jest": true
+  },
+  "overrides": [
+    {
+      "files": ["*.test.*", "**/__tests__/**"],
+      "rules": {
+        "vitest/no-focused-tests": "error",
+        "vitest/no-disabled-tests": "warn"
+      }
+    }
+  ]
+}

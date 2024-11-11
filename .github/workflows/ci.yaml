@@ -1,0 +1,27 @@
+name: Branch CI
+on: pull_request
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        shell: bash
+        env:
+          CI: "true"
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN  }}
+
+      - name: Lint check
+        run: yarn run lint
+
+      - name: Check for circular file dependencies
+        run: yarn run madge
+
+      - name: Run all tests
+        run: yarn run test
