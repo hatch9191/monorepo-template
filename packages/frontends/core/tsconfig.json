@@ -1,10 +1,14 @@
 {
   "extends": "../../../config/ts/tsconfig.frontend.json",
-  "baseUrl": ".",
-  "paths": {
-    "@/atoms/*": ["./src/components/atoms/*"],
-    "@/molecules/*": ["./src/components/molecules/*"],
-    "@/organisms/*": ["./src/components/organisms/*"],
-    "@/templates/*": ["./src/components/templates/*"]
-  }
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/atoms/*": ["./src/components/atoms/*"],
+      "@/molecules/*": ["./src/components/molecules/*"],
+      "@/organisms/*": ["./src/components/organisms/*"],
+      "@/templates/*": ["./src/components/templates/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", ".next"]
 }
