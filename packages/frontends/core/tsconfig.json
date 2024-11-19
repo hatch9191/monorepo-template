@@ -1,16 +1,10 @@
 {
-  "extends": "../../../config/tsconfig.base.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",                  
-    "types": ["vitest/globals"],         
-    "baseUrl": ".",                      
-    "paths": {
-      "@/atoms/*": ["./src/components/_atoms/*"],
-      "@/molecules/*": ["./src/components/_molecules/*"],
-      "@/organisms/*": ["./src/components/_organisms/*"],
-      "@/utils/*": ["./src/utils/*"]
-    }
-  },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules", ".next"]
+  "extends": "../../../config/ts/tsconfig.frontend.json",
+  "baseUrl": ".",
+  "paths": {
+    "@/atoms/*": ["./src/components/atoms/*"],
+    "@/molecules/*": ["./src/components/molecules/*"],
+    "@/organisms/*": ["./src/components/organisms/*"],
+    "@/templates/*": ["./src/components/templates/*"]
+  }
 }

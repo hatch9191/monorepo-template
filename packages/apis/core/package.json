@@ -1,9 +1,19 @@
 {
   "name": "core-api",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "format": "prettier --config ../../../config/prettier/.prettierrc --write ."
+    "format": "prettier --config ../../../config/prettier/.prettierrc --write .",
+    "build": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@monorepo/utils": "*"
+    "@monorepo/utils": "*",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }
