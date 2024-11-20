@@ -9,7 +9,8 @@
   "scripts": {
     "typecheck": "tsc --pretty --noEmit",
     "prettier:check": "prettier --check .",
-    "check-all": "yarn prettier:check && yarn typecheck"
+    "check-all": "yarn prettier:check && yarn typecheck",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
