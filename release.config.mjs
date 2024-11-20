@@ -5,18 +5,16 @@ export default {
   branches: ["main"],
   plugins: [
     "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator", 
+    "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     [
       "@semantic-release/git",
       {
-        assets: [
-          "package.json",
-          "CHANGELOG.md"
-        ],
-        message: "chore(release): set `package.json` to ${nextRelease.version} [skip ci]"
-      }
+        assets: ["package.json", "CHANGELOG.md"],
+        message:
+          "chore(release): set `package.json` to ${nextRelease.version} [skip ci]",
+      },
     ],
-    "@semantic-release/github"
-  ]
+    "@semantic-release/github",
+  ],
 };

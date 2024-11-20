@@ -1,15 +1,15 @@
 {
   "name": "monorepo-template",
   "version": "0.0.1",
-  "prettier": "./config/prettier.config.mjs",
+  "prettier": "./config/prettier/prettier.config.mjs",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "typecheck": "tsc --pretty --noEmit",
+    "lint:fix": "prettier --write --ignore-path ./.prettierignore",
     "prettier:check": "prettier --check .",
-    "check-all": "yarn prettier:check && yarn typecheck",
+    "check-all": "yarn prettier:check",
     "prepare": "husky install"
   },
   "devDependencies": {

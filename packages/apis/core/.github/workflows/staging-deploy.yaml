@@ -6,7 +6,7 @@ on:
     branches:
       - develop
     paths:
-      - 'packages/apis/core/**'
+      - "packages/apis/core/**"
 
 jobs:
   test:

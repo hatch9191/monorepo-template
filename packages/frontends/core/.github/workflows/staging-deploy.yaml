@@ -6,7 +6,7 @@ on:
     branches:
       - develop
     paths:
-      - 'packages/frontends/core/**'
+      - "packages/frontends/core/**"
 
 jobs:
   test:
