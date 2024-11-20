@@ -1,11 +1,17 @@
 {
   "name": "monorepo-template",
   "version": "0.0.1",
-  "prettier": "./config/prettier.config.mjs",
+  "prettier": "./config/prettier/prettier.config.mjs",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "lint:fix": "prettier --write --ignore-path ./.prettierignore",
+    "prettier:check": "prettier --check .",
+    "check-all": "yarn prettier:check",
+    "prepare": "husky install"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
@@ -19,6 +25,7 @@
     "@vitest/eslint-plugin": "^1.1.10",
     "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.7",
     "prettier": "^3.3.3",
     "semantic-release": "^24.2.0",
     "typescript": "^5.6.3",

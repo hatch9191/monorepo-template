@@ -11,5 +11,5 @@ export default {
   printWidth: 80,
   proseWrap: "preserve",
   quoteProps: "as-needed",
-  trailingComma: "es5"
-}
+  trailingComma: "es5",
+};
