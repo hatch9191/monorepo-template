@@ -1,6 +1,6 @@
 import { defineConfig } from "vitest/config";
 
-export default defineConfig({
+export const nodeConfig = defineConfig({
   test: {
     globals: true,
     clearMocks: true,

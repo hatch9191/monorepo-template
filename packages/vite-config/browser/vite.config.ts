@@ -1,6 +1,6 @@
 import { defineConfig } from "vitest/config";
 
-const testConfig = defineConfig({
+export const browserConfig = defineConfig({
   test: {
     globals: true,
     clearMocks: true,
@@ -25,5 +25,3 @@ const testConfig = defineConfig({
     },
   },
 });
-
-export default testConfig;

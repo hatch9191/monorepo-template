@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "files": [
-    "browser/vite.config.ts",
-    "node/vite.config.ts"
-  ],
+  "exports": {
+    "./browser": "./browser/index.ts",
+    "./node": "./node/index.ts"
+  },
   "dependencies": {
     "@vitest/coverage-istanbul": "2.1.3",
     "@vitest/ui": "2.1.3",
