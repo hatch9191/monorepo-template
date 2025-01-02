@@ -1,0 +1,23 @@
+{
+  "name": "@repo/utils",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./string": "./src/string/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint src/",
+    "lint-fix": "eslint src/ --fix",
+    "check-types": "tsc --noEmit",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@turbo/gen": "^1.12.4",
+    "@types/node": "^20.11.24",
+    "typescript": "5.5.4",
+    "vitest": "^2.1.6"
+  }
+}
