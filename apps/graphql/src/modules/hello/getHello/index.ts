@@ -1,0 +1,1 @@
+export { getHello } from "./getHello";

@@ -1,18 +1,44 @@
-import { InitialContext, Context } from "./types";
+import { InitialContext, Context, ContextUser } from "./types";
+import { createPrismaClient } from "@/prisma/createPrismaClient";
+import { decodeJwtToken } from "@/helpers/jwt/index";
+import { envVarConfig } from "@/constants/envVarConfig";
 
-import { createPrismaClient } from "../prisma/createPrismaClient";
-
-const extractHeaders = (context: InitialContext): Headers => {
+function extractHeaders(context: InitialContext): Headers | undefined {
   return context.request.headers;
-};
+}
+
+function getDecodedUser(token?: string | null): ContextUser | null {
+  try {
+    if (!token) {
+      return null;
+    }
+
+    const decodedToken = decodeJwtToken<ContextUser>(
+      envVarConfig.jwtSecret,
+      token
+    );
+
+    if (!decodedToken) {
+      return null;
+    }
+
+    return {
+      ...decodedToken,
+      accessToken: token,
+    };
+  } catch (error) {
+    console.error("Invalid token -", error);
+    return null;
+  }
+}
 
 export function createContext(initialContext: InitialContext): Context {
   const headers = extractHeaders(initialContext);
-  console.log(headers); //TODO: decode the Bearer Token
+  const token = headers?.get("authorization")?.replace("Bearer ", "");
 
   return {
     ...initialContext,
-    // user: {},
+    user: getDecodedUser(token),
     prisma: createPrismaClient(),
   };
 }

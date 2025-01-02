@@ -1,9 +1,10 @@
+import { PrismaClient } from "@prisma/client";
 import { createPrismaClient } from "./createPrismaClient";
 
 describe(createPrismaClient.name, () => {
-  it("should create a prisma client", () => {
-    const prisma = createPrismaClient();
+  it("should create a new PrismaClient instance if none exists", () => {
+    const prisma1 = createPrismaClient();
 
-    expect(prisma).toBeNull();
+    expect(prisma1).toBeInstanceOf(PrismaClient);
   });
 });

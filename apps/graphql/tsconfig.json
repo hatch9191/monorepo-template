@@ -1,9 +1,18 @@
 {
   "extends": "@repo/typescript-config/base.json",
-  "compilerOptions": {
-    "lib": ["ES2015"],
-    "outDir": "./dist"
-  },
   "exclude": ["node_modules"],
-  "include": ["."]
+  "include": ["."],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/__mocks__/*": ["./src/__mocks__/*"],
+      "@/context/*": ["./src/context/*"],
+      "@/constants/*": ["./src/constants/*"],
+      "@/graphql/*": ["./src/graphql/*"],
+      "@/helpers/*": ["./src/helpers/*"],
+      "@/modules/*": ["./src/modules/*"],
+      "@/prisma/*": ["./src/prisma/*"],
+      "@/types/*": ["./src/types/*"]
+    }
+  }
 }

@@ -7,7 +7,7 @@ export function createPrismaClient(): PrismaClient {
     return prismaClient;
   }
 
-  // prismaClient = new PrismaClient();
+  prismaClient = new PrismaClient();
 
   return prismaClient;
 }

@@ -1,18 +1,14 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, User } from "@prisma/client";
 import { GraphQLResolveInfo } from "graphql";
 import { YogaInitialContext } from "graphql-yoga";
 
 export type InitialContext = GraphQLResolveInfo & YogaInitialContext;
 
-// export type ContextUser = Pick<
-//   User,
-//   "id" | "email" | "firstName" | "lastName"
-// > & {
-//   accessToken: string;
-//   userRoles: string[];
-// };
+export type ContextUser = Pick<User, "id" | "email" | "role"> & {
+  accessToken: string;
+};
 
-export type Context = InitialContext & {
+export type Context = YogaInitialContext & {
   prisma: PrismaClient;
-  // user: ContextUser | null;
+  user: ContextUser | null;
 };

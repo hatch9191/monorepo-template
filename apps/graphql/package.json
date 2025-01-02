@@ -1,11 +1,11 @@
 {
-  "name": "graphql",
+  "name": "graphql-server",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "start": "node dist/server.js",
-    "dev": "tsup --watch --onSuccess \"node dist/server.js\"",
-    "build": "tsup",
+    "start": "vite-node dist/server.js",
+    "dev": "vite-node --config vite.config.mjs --watch src/server.ts",
     "clean": "rm -rf dist",
     "check-types": "tsc --noEmit",
     "lint": "eslint src/",
@@ -13,13 +13,15 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@graphql-tools/load-files": "^7.0.0",
+    "@graphql-tools/merge": "^9.0.16",
+    "@liuli-util/vite-plugin-node": "^0.9.0",
     "@prisma/client": "^6.0.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "express": "^4.18.3",
     "graphql": "^16.9.0",
     "graphql-yoga": "^5.10.4",
-    "morgan": "^1.10.0",
+    "jsonwebtoken": "^9.0.2",
     "prisma": "^6.0.0"
   },
   "devDependencies": {
@@ -28,12 +30,14 @@
     "@repo/vite-config": "*",
     "@types/body-parser": "^1.19.5",
     "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/morgan": "^1.9.9",
+    "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^20.11.24",
-    "@types/supertest": "^6.0.2",
-    "tsup": "^8.0.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "5.5.4",
-    "vitest": "^2.1.6"
+    "vite": "^6.0.6",
+    "vite-node": "^2.1.8",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^2.1.6",
+    "vitest-mock-extended": "^2.0.2"
   }
 }
