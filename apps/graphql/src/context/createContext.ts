@@ -15,7 +15,7 @@ function getDecodedUser(token?: string | null): ContextUser | null {
 
     const decodedToken = decodeJwtToken<ContextUser>(
       envVarConfig.jwtSecret,
-      token
+      token,
     );
 
     if (!decodedToken) {
