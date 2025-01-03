@@ -1,1 +1,0 @@
-export { getHello } from "./getHello";

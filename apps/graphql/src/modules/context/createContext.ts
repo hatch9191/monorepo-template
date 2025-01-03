@@ -1,5 +1,5 @@
 import { InitialContext, Context, ContextUser } from "./types";
-import { createPrismaClient } from "@/prisma/createPrismaClient";
+import { createPrismaClient } from "src/clients/prisma/createPrismaClient";
 import { decodeJwtToken } from "@/helpers/jwt/index";
 import { envVarConfig } from "@/constants/envVarConfig";
 

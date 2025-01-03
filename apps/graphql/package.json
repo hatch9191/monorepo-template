@@ -4,8 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "vite-node dist/server.js",
-    "dev": "vite-node --config vite.config.mjs --watch src/server.ts",
+    "dev": "tsx watch src/server.ts",
     "clean": "rm -rf dist",
     "check-types": "tsc --noEmit",
     "lint": "eslint src/",
@@ -15,7 +14,6 @@
   "dependencies": {
     "@graphql-tools/load-files": "^7.0.0",
     "@graphql-tools/merge": "^9.0.16",
-    "@liuli-util/vite-plugin-node": "^0.9.0",
     "@prisma/client": "^6.0.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
@@ -32,10 +30,8 @@
     "@types/cors": "^2.8.17",
     "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^20.11.24",
-    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.19.2",
     "typescript": "5.5.4",
-    "vite": "^6.0.6",
-    "vite-node": "^2.1.8",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.6",
     "vitest-mock-extended": "^2.0.2"

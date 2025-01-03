@@ -1,15 +1,11 @@
 import { defineConfig } from "vitest/config";
 import dotenv from "dotenv";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { node } from "@liuli-util/vite-plugin-node";
 
 dotenv.config();
 
 export default defineConfig({
-  plugins: [tsconfigPaths(), node()],
-  resolve: {
-    extensions: [".ts", ".js"], // Ensure .ts and .js are resolved
-  },
+  plugins: [tsconfigPaths()],
   test: {
     name: "graphql-server",
     globals: true,

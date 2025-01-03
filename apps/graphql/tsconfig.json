@@ -6,12 +6,12 @@
     "baseUrl": "./",
     "paths": {
       "@/__mocks__/*": ["./src/__mocks__/*"],
-      "@/context/*": ["./src/context/*"],
+      "@/context/*": ["src/modules/context/*"],
       "@/constants/*": ["./src/constants/*"],
       "@/graphql/*": ["./src/graphql/*"],
       "@/helpers/*": ["./src/helpers/*"],
       "@/modules/*": ["./src/modules/*"],
-      "@/prisma/*": ["./src/prisma/*"],
+      "@/prisma/*": ["src/clients/prisma/*"],
       "@/types/*": ["./src/types/*"]
     }
   }

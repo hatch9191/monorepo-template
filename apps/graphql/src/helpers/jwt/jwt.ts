@@ -1,19 +1,19 @@
-import { sign, verify } from "jsonwebtoken";
+import JWT from "jsonwebtoken";
 
 export function signJwtToken(payload: any, secret: string): string {
-  return sign(payload, secret, { expiresIn: "21d" });
+  return JWT.sign(payload, secret, { expiresIn: "21d" });
 }
 
 export function decodeJwtToken<T>(
   secret: string,
-  token?: string | null,
+  token?: string | null
 ): T | null {
   try {
     if (!token) {
       return null;
     }
 
-    const payload = verify(token, secret);
+    const payload = JWT.verify(token, secret);
 
     return payload as T;
   } catch (error) {

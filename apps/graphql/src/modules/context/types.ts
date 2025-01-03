@@ -8,7 +8,7 @@ export type ContextUser = Pick<User, "id" | "email" | "role"> & {
   accessToken: string;
 };
 
-export type Context = YogaInitialContext & {
+export type Context = InitialContext & {
   prisma: PrismaClient;
   user: ContextUser | null;
 };
