@@ -1,0 +1,14 @@
+type Query {
+  userFromContext: User
+}
+
+type User {
+  id: String!
+  email: String!
+  role: UserRole!
+}
+
+enum UserRole {
+  ADMIN
+  BASIC
+}

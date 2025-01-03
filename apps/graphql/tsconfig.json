@@ -1,0 +1,18 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "exclude": ["node_modules"],
+  "include": ["."],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/__mocks__/*": ["./src/__mocks__/*"],
+      "@/context/*": ["src/modules/context/*"],
+      "@/constants/*": ["./src/constants/*"],
+      "@/graphql/*": ["./src/graphql/*"],
+      "@/helpers/*": ["./src/helpers/*"],
+      "@/modules/*": ["./src/modules/*"],
+      "@/prisma/*": ["src/clients/prisma/*"],
+      "@/types/*": ["./src/types/*"]
+    }
+  }
+}
