@@ -6,7 +6,7 @@ export default {
     userFromContext: async (
       _root: unknown,
       _args: unknown,
-      ctx: Context
+      ctx: Context,
     ): Promise<ContextUser | null> => getUserFromContext(ctx),
   },
 };
