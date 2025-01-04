@@ -10,6 +10,7 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "module": "ESNext",
+    "target": "ESNext",
     "moduleResolution": "bundler",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -18,8 +19,7 @@
     "strict": true,
     "noEmit": true,
     "incremental": true,
-    "types": ["vitest/globals", "vite/client"],
-    "target": "ES2020"
+    "types": ["vitest/globals", "vite/client"]
   },
   "exclude": ["node_modules"]
 }

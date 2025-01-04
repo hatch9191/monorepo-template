@@ -1,5 +1,5 @@
 import { ContextUser, InitialContext } from "@/context/types";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@repo/db";
 import { mockDeep, DeepMockProxy } from "vitest-mock-extended";
 import { contextUser } from "../user";
 

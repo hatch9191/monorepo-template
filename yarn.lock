@@ -901,7 +901,7 @@
     dset "^3.1.2"
     tslib "^2.4.0"
 
-"@graphql-typed-document-node/core@3.2.0", "@graphql-typed-document-node/core@^3.1.1", "@graphql-typed-document-node/core@^3.2.0":
+"@graphql-typed-document-node/core@3.2.0", "@graphql-typed-document-node/core@^3.1.1":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.2.0.tgz#5f3d96ec6b2354ad6d8a28bf216a1d97b5426861"
   integrity sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==
@@ -3554,13 +3554,6 @@ graphql-middleware@^6.1.35:
     "@graphql-tools/delegate" "^8.8.1"
     "@graphql-tools/schema" "^8.5.1"
 
-graphql-request@^7.1.2:
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-7.1.2.tgz#52d7fd6d8d08c9f0b00c84a091376ce9fbdfa945"
-  integrity sha512-+XE3iuC55C2di5ZUrB4pjgwe+nIQBuXVIK9J98wrVwojzDW3GMdSBZfxUk8l4j9TieIpjpggclxhNEU9ebGF8w==
-  dependencies:
-    "@graphql-typed-document-node/core" "^3.2.0"
-
 graphql-shield@^7.6.5:
   version "7.6.5"
   resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-7.6.5.tgz#91683254e498e120ce58d560b8b4f118e10530ea"
@@ -5913,7 +5906,7 @@ ts-essentials@>=10.0.0:
   resolved "https://registry.yarnpkg.com/ts-essentials/-/ts-essentials-10.0.4.tgz#db8381c2e44cddb3339a2286174c4763bc1dcedb"
   integrity sha512-lwYdz28+S4nicm+jFi6V58LaAIpxzhg9rLdgNC1VsdP/xiFBseGhF1M/shwCk6zMmwahBZdXcl34LVHrEang3A==
 
-ts-node@^10.9.1:
+ts-node@^10.9.1, ts-node@^10.9.2:
   version "10.9.2"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-10.9.2.tgz#70f021c9e185bccdca820e26dc413805c101c71f"
   integrity sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==
