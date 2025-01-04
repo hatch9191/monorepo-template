@@ -26,8 +26,15 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Generate Prisma client
-        run: yarn prisma generate
+      - name: Generate Prisma clients for all apps
+        run: |
+          # Loop through each app and generate the Prisma client if prisma/schema.prisma exists
+          for app in apps/*; do
+            if [ -f "$app/prisma/schema.prisma" ]; then
+              echo "Generating Prisma client for $app"
+              yarn prisma generate --schema="$app/prisma/schema.prisma"
+            fi
+          done
 
       - name: Test
         run: yarn test
