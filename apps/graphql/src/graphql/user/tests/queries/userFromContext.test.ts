@@ -33,12 +33,12 @@ describe(userResolvers.Query.userFromContext.name, () => {
   it("should throw if user is not authenticated", async () => {
     const response = await executeGraphqlRequest<UserFromContextResponse>(
       query,
-      null
+      null,
     );
 
     expect(response.data?.userFromContext).toBeNull();
     expect(response.errors?.[0]?.message).toEqual(
-      HTTP_STATUSES.UNAUTHORIZED.MESSAGE
+      HTTP_STATUSES.UNAUTHORIZED.MESSAGE,
     );
   });
 });

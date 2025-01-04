@@ -8,7 +8,7 @@ import { ContextUser } from "@/context/types";
 
 export async function executeGraphqlRequest<T>(
   query: string,
-  contextUser?: ContextUser | null
+  contextUser?: ContextUser | null,
 ) {
   const yoga = createYoga({
     schema,

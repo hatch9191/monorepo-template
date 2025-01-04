@@ -3,7 +3,7 @@
   "ui": "tui",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["vite-config#build", "^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["build/**", "dist/**", ".next/**", "!.next/cache/**"]
     },
@@ -17,7 +17,8 @@
     },
     "test": {
       "outputs": ["coverage/**"],
-      "dependsOn": []
+      "dependsOn": ["vite-config#build"],
+      "inputs": ["packages/vite-config/**", "$TURBO_DEFAULT$"]
     },
     "dev": {
       "dependsOn": ["^build"],

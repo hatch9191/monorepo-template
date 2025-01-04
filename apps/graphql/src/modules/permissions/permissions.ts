@@ -16,5 +16,5 @@ export const rules = shield(
   },
   {
     allowExternalErrors: true,
-  }
+  },
 );
