@@ -1,4 +1,4 @@
-import { PrismaClient, User } from "@prisma/client";
+import { PrismaClient, User } from "@repo/db";
 import { GraphQLResolveInfo } from "graphql";
 import { YogaInitialContext } from "graphql-yoga";
 

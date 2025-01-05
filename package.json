@@ -6,6 +6,8 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "test": "turbo run test",
+    "db:generate": "turbo run db:generate",
+    "db:push": "turbo run db:push",
     "test:watch": "turbo run test:watch",
     "check-types": "turbo run check-types",
     "format": "prettier --write \"**/*.{ts,tsx}\"",

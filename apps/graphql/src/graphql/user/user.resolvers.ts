@@ -1,5 +1,5 @@
 import { Context, ContextUser } from "@/modules/context/types";
-import { getUserFromContext } from "@/modules/user/getHello";
+import { getUserFromContext } from "@/modules/user/getUserFromContext.test";
 
 export default {
   Query: {

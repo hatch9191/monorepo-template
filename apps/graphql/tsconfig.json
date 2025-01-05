@@ -5,14 +5,14 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/__mocks__/*": ["./src/__mocks__/*"],
+      "@/__mocks__/*": ["src/__mocks__/*"],
       "@/context/*": ["src/modules/context/*"],
-      "@/constants/*": ["./src/constants/*"],
-      "@/graphql/*": ["./src/graphql/*"],
-      "@/helpers/*": ["./src/helpers/*"],
-      "@/modules/*": ["./src/modules/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/graphql/*": ["src/graphql/*"],
+      "@/helpers/*": ["src/helpers/*"],
+      "@/modules/*": ["src/modules/*"],
       "@/prisma/*": ["src/clients/prisma/*"],
-      "@/types/*": ["./src/types/*"]
+      "@/types/*": ["src/types/*"]
     }
   }
 }

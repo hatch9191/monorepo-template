@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@repo/db";
 import { createPrismaClient } from "./createPrismaClient";
 
 describe(createPrismaClient.name, () => {
