@@ -1,7 +1,7 @@
-import { createMockContext } from "@/__mocks__/context/createMockContext";
-import { getUserFromContext } from "./getUserFromContext";
-import { Context } from "@/context/types";
-import { contextUser } from "@/__mocks__/user";
+import { createMockContext } from "@/__mocks__/context/createMockContext.ts";
+import { getUserFromContext } from "./getUserFromContext.ts";
+import { Context } from "@/context/types.ts";
+import { contextUser } from "@/__mocks__/user.ts";
 
 describe(getUserFromContext.name, () => {
   it("should return null if no user", () => {

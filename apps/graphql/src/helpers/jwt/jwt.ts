@@ -6,7 +6,7 @@ export function signJwtToken(payload: any, secret: string): string {
 
 export function decodeJwtToken<T>(
   secret: string,
-  token?: string | null,
+  token?: string | null
 ): T | null {
   try {
     if (!token) {

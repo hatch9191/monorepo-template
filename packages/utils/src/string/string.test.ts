@@ -3,7 +3,7 @@ import { ensureString } from "./string.ts";
 describe(ensureString.name, () => {
   it("should throw error if string is undefined", () => {
     expect(() => ensureString("Key", undefined)).toThrow(
-      "Key does not exist or is empty",
+      "Key does not exist or is empty"
     );
   });
 

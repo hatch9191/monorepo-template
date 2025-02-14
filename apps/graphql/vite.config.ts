@@ -1,8 +1,13 @@
-import { defineConfig } from "vitest/config";
+import { defineConfig, UserConfig } from "vitest/config";
+import dotenv from "dotenv";
+import tsconfigPaths from "vite-tsconfig-paths";
 
-export const nodeConfig = defineConfig({
+dotenv.config();
+
+export default defineConfig({
+  plugins: [tsconfigPaths()] as UserConfig["plugins"],
   test: {
-    name: "node",
+    name: "graphql-server",
     globals: true,
     environment: "node",
     clearMocks: true,

@@ -1,8 +1,8 @@
 import { createServer } from "node:http";
 import { createYoga } from "graphql-yoga";
 
-import { schema } from "./schema";
-import { createContext } from "@/modules/context/createContext";
+import { schema } from "./schema.ts";
+import { createContext } from "@/modules/context/createContext.ts";
 
 export const yoga = createYoga({
   schema,

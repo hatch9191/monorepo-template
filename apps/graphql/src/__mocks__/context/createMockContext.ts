@@ -1,7 +1,8 @@
-import { ContextUser, InitialContext } from "@/context/types";
 import { PrismaClient } from "@repo/db";
 import { mockDeep, DeepMockProxy } from "vitest-mock-extended";
-import { contextUser } from "../user";
+
+import { ContextUser, InitialContext } from "@/context/types.ts";
+import { contextUser } from "../user.ts";
 
 export type MockContext = InitialContext & {
   prisma: DeepMockProxy<PrismaClient>;

@@ -1,5 +1,6 @@
 import { PrismaClient } from "@repo/db";
-import { createPrismaClient } from "./createPrismaClient";
+
+import { createPrismaClient } from "./createPrismaClient.ts";
 
 describe(createPrismaClient.name, () => {
   it("should create a new PrismaClient instance if none exists", () => {

@@ -1,6 +1,6 @@
 import { rule, shield } from "graphql-shield";
 
-import { Context } from "@/context/types";
+import { Context } from "@/context/types.ts";
 
 const isAuthenticated = rule({
   cache: "contextual",
@@ -16,5 +16,5 @@ export const rules = shield(
   },
   {
     allowExternalErrors: true,
-  },
+  }
 );
