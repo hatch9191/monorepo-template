@@ -15,10 +15,8 @@
     "check-types": {
       "dependsOn": ["^check-types"]
     },
-    "test": {
-      "outputs": ["coverage/**"],
-      "dependsOn": ["@repo/vite-config#build"],
-      "inputs": ["@repo/vite-config/**", "$TURBO_DEFAULT$"]
+    "test:unit": {
+      "outputs": ["coverage/**"]
     },
     "dev": {
       "dependsOn": ["^build"],
@@ -31,7 +29,11 @@
     "db:generate": {
       "cache": false
     },
-    "db:push": {
+    "db:migrate": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:deploy": {
       "cache": false
     }
   }

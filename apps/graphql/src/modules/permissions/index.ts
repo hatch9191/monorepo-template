@@ -1,1 +1,1 @@
-export { rules } from "./permissions";
+export { rules } from "./permissions.ts";

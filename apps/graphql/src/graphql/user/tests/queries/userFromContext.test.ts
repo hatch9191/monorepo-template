@@ -1,7 +1,7 @@
-import { executeGraphqlRequest } from "@/__mocks__/server";
-import { user } from "@/__mocks__/user";
-import { HTTP_STATUSES } from "@/constants/http";
-import userResolvers from "../../user.resolvers";
+import { executeGraphqlRequest } from "@/__mocks__/server.ts";
+import { user } from "@/__mocks__/user.ts";
+import { HTTP_STATUSES } from "@/constants/http.ts";
+import userResolvers from "../../user.resolvers.ts";
 
 describe(userResolvers.Query.userFromContext.name, () => {
   interface UserFromContextResponse {
@@ -33,12 +33,12 @@ describe(userResolvers.Query.userFromContext.name, () => {
   it("should throw if user is not authenticated", async () => {
     const response = await executeGraphqlRequest<UserFromContextResponse>(
       query,
-      null,
+      null
     );
 
     expect(response.data?.userFromContext).toBeNull();
     expect(response.errors?.[0]?.message).toEqual(
-      HTTP_STATUSES.UNAUTHORIZED.MESSAGE,
+      HTTP_STATUSES.UNAUTHORIZED.MESSAGE
     );
   });
 });

@@ -1,3 +1,2 @@
-console.log("Hello from Prisma!");
-
+export { prisma } from "./client";
 export * from "@prisma/client";

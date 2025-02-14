@@ -1,11 +1,11 @@
 {
   "extends": "@repo/typescript-config/base.json",
-  "exclude": ["node_modules"],
   "include": ["."],
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
       "@/__mocks__/*": ["src/__mocks__/*"],
+      "@/clients/*": ["src/clients/*"],
       "@/context/*": ["src/modules/context/*"],
       "@/constants/*": ["src/constants/*"],
       "@/graphql/*": ["src/graphql/*"],

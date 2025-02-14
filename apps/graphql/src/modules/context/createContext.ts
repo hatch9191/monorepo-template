@@ -1,7 +1,7 @@
-import { InitialContext, Context, ContextUser } from "./types";
-import { createPrismaClient } from "src/clients/prisma/createPrismaClient";
-import { decodeJwtToken } from "@/helpers/jwt/index";
-import { envVarConfig } from "@/constants/envVarConfig";
+import { InitialContext, Context, ContextUser } from "./types.ts";
+import { createPrismaClient } from "@/clients/prisma/createPrismaClient.ts";
+import { decodeJwtToken } from "@/helpers/jwt/jwt.ts";
+import { envVarConfig } from "@/constants/envVarConfig.ts";
 
 function extractHeaders(context: InitialContext): Headers | undefined {
   return context.request.headers;
@@ -15,7 +15,7 @@ function getDecodedUser(token?: string | null): ContextUser | null {
 
     const decodedToken = decodeJwtToken<ContextUser>(
       envVarConfig.jwtSecret,
-      token,
+      token
     );
 
     if (!decodedToken) {

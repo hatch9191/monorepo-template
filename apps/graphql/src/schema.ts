@@ -6,19 +6,19 @@ import { mergeTypeDefs, mergeResolvers } from "@graphql-tools/merge";
 import { fileURLToPath } from "url";
 import { applyMiddleware } from "graphql-middleware";
 
-import { rules } from "@/modules/permissions";
+import { rules } from "@/modules/permissions/permissions.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const typeDefs = mergeTypeDefs(
-  loadFilesSync(path.join(__dirname, "./graphql/**/*.graphql")),
+  loadFilesSync(path.join(__dirname, "./graphql/**/*.graphql"))
 );
 
 async function loadResolvers() {
   const loadedResolvers = await loadFiles(
     path.join(__dirname, "./graphql/**/*.resolvers.*"),
-    { requireMethod: (path: string) => import(path), ignoreIndex: true },
+    { requireMethod: (path: string) => import(path), ignoreIndex: true }
   );
 
   return mergeResolvers(loadedResolvers);

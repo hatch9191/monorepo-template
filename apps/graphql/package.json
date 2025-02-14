@@ -9,7 +9,7 @@
     "check-types": "tsc --noEmit",
     "lint": "eslint src/",
     "lint-fix": "eslint src/ --fix",
-    "test": "vitest"
+    "test:unit": "vitest"
   },
   "dependencies": {
     "@graphql-tools/load-files": "^7.0.0",
@@ -29,7 +29,6 @@
     "@graphql-tools/executor-http": "^1.2.4",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "@repo/vite-config": "*",
     "@types/body-parser": "^1.19.5",
     "@types/cors": "^2.8.17",
     "@types/jsonwebtoken": "^9.0.7",
