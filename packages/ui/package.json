@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@fontsource/ibm-plex-sans": "^5.1.1",
+    "@repo/utils": "*",
     "init": "^0.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -42,5 +43,9 @@
   },
   "resolutions": {
     "styled-components": "^6"
+  },
+  "exports": {
+    "./Button": "./src/components/atoms/Button.tsx",
+    "./Logo": "./src/components/atoms/Logo.tsx"
   }
 }

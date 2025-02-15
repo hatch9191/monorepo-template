@@ -1,5 +1,5 @@
+import { prisma } from "@repo/db";
 import { InitialContext, Context, ContextUser } from "./types.ts";
-import { createPrismaClient } from "@/clients/prisma/createPrismaClient.ts";
 import { decodeJwtToken } from "@/helpers/jwt/jwt.ts";
 import { envVarConfig } from "@/constants/envVarConfig.ts";
 
@@ -39,6 +39,6 @@ export function createContext(initialContext: InitialContext): Context {
   return {
     ...initialContext,
     user: getDecodedUser(token),
-    prisma: createPrismaClient(),
+    prisma,
   };
 }

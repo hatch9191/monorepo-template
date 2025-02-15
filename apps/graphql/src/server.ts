@@ -10,7 +10,7 @@ export const yoga = createYoga({
   maskedErrors: false,
 });
 
-let server = createServer(yoga);
+const server = createServer(yoga);
 
 const startServer = () => {
   server.listen(4000, () => {
