@@ -7,6 +7,8 @@ import { StyledJsxRegistry } from "./registry.tsx";
 const plex = IBM_Plex_Sans({
   weight: ["500", "600"],
   variable: "--font-plex",
+  subsets: ["latin"],
+  preload: true,
 });
 
 export const metadata: Metadata = {
