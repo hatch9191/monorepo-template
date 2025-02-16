@@ -33,11 +33,11 @@
     "@types/body-parser": "^1.19.5",
     "@types/cors": "^2.8.17",
     "@types/jsonwebtoken": "^9.0.7",
-    "@types/node": "^20.11.24",
+    "@types/node": "^22",
     "tsx": "^4.19.2",
-    "typescript": "5.5.4",
-    "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^2.1.6",
-    "vitest-mock-extended": "^2.0.2"
+    "typescript": "^5",
+    "vite-tsconfig-paths": "^5",
+    "vitest": "^2",
+    "vitest-mock-extended": "^2"
   }
 }

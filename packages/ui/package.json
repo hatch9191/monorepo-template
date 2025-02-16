@@ -3,8 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist/ui.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "dev": "vite",
+    "build": "vite build",
     "format": "prettier --write .",
     "lint": "eslint src/",
     "lint-fix": "eslint src/ --fix",
@@ -20,7 +23,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "storybook": "^8.5.5",
-    "styled-components": "^6.1.15"
+    "styled-components": "^6"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
@@ -34,18 +37,16 @@
     "@storybook/react": "^8.5.5",
     "@storybook/react-vite": "^8.5.5",
     "@storybook/test": "^8.5.5",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/coverage-istanbul": "2.1.6",
-    "typescript": "5.7.3",
-    "vite": "^6.1.0"
+    "typescript": "^5",
+    "vite": "^6.1.0",
+    "vite-plugin-dts": "^4.5.0"
   },
   "resolutions": {
     "styled-components": "^6"
-  },
-  "exports": {
-    "./Button": "./src/components/atoms/Button.tsx",
-    "./Logo": "./src/components/atoms/Logo.tsx"
   }
 }

@@ -1,3 +1,4 @@
+import "@fontsource/ibm-plex-sans";
 import type { Preview } from "@storybook/react";
 
 const preview: Preview = {
