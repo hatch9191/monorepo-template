@@ -8,14 +8,9 @@
       }
     ],
     "allowJs": true,
-    "declaration": false,
-    "declarationMap": false,
-    "incremental": true,
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "NodeNext",
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "target": "es5"
+    "module": "ESNext",
+    "moduleResolution": "bundler"
   }
 }

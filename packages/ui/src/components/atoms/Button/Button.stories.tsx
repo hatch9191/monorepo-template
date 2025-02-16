@@ -14,27 +14,27 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    text: "Primary button",
+    children: "Primary button",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    text: "Secondary button",
+    children: "Secondary button",
     variant: BUTTON_VARIANTS.SECONDARY,
   },
 };
 
 export const Tertiary: Story = {
   args: {
-    text: "Tertiary button",
+    children: "Tertiary button",
     variant: BUTTON_VARIANTS.TERTIARY,
   },
 };
 
 export const Small: Story = {
   args: {
-    text: "Small button",
+    children: "Small button",
     variant: BUTTON_VARIANTS.PRIMARY,
     size: BUTTON_SIZES.SMALL,
   },
