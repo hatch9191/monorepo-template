@@ -1,5 +1,3 @@
-import "@fontsource/ibm-plex-sans";
-
 import { pxToRem } from "@/helpers/pxToRem/pxToRem.ts";
 
 export const COLOURS = {
